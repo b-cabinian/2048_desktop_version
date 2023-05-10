@@ -1,0 +1,135 @@
+.root{
+    -fx-font-size: 16pt;
+    -fx-background: #faf8ef;
+}
+
+#lblTitle {
+    -fx-font-size: 80 pt;
+    -fx-text-fill: #776e65;
+    -fx-font-weight: bold;
+}
+
+.score-container {
+    -fx-background-color: #bbada0;
+    -fx-font-weight: bold;
+    -fx-font-size: 15 pt;
+    -fx-background-radius: 5px;
+}
+
+.score-label {
+    -fx-text-fill: #eee4da;
+}
+
+#lblIntro {
+    -fx-text-fill: #776e65;
+    -fx-font-size: 20 pt;
+}
+
+.score-value {
+    -fx-text-fill: white;
+    -fx-font-size: 20 pt;
+}
+
+#btnNewGame {
+    -fx-background-color: #8f7a66;
+    -fx-text-fill: #f9f6f2;
+    -fx-font-size: 16 pt;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5px;
+}
+
+.grid-container {
+    -fx-background-color: #bbada0;
+    -fx-border-color: #bbada0;
+    -fx-border-width: 8px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+
+.grid-cell {
+    -fx-background-color: rgba(238, 228, 218, 0.35);
+    -fx-padding: 8px;
+    -fx-border-insets: 8px;
+    -fx-background-insets: 8px;
+    -fx-background-radius: 5px;
+}
+
+.instruction-regular {
+    -fx-fill: #776e65;
+}
+
+.instruction-bold {
+    -fx-fill: #776e65;
+    -fx-font-weight: bold;
+}
+
+.tile {
+    -fx-font-weight: bold;
+    -fx-background-radius: 5px;
+    -fx-font-size: 50px;
+}
+
+.tile-2 {
+    -fx-text-fill: #776e65;
+    -fx-background-color: #eee4da;
+}
+
+.tile-4 {
+    -fx-text-fill: #776e65;
+    -fx-background-color: #eee1c9;
+}
+
+.tile-8 {
+    -fx-text-fill: #f9f6f2;
+    -fx-background-color: #f3b27a;
+}
+
+.tile-16 {
+    -fx-text-fill: #f9f6f2;
+    -fx-background-color: #f69664;
+}
+
+.tile-32 {
+    -fx-text-fill: #f9f6f2;
+    -fx-background-color: #f77c5f;
+}
+
+.tile-64 {
+    -fx-text-fill: #f9f6f2;
+    -fx-background-color: #f75f3b;
+}
+
+.tile-128 {
+    -fx-text-fill: #f9f6f2;
+    -fx-background-color: #edd073;
+    -fx-effect: dropshadow(gaussian, rgba(243, 215, 116, 0.238095), 30, 0.3, 0, 0);
+    -fx-font-size: 40px;
+}
+
+.tile-256 {
+    -fx-text-fill: #f9f6f2;
+    -fx-background-color: #edcc62;
+    -fx-effect: dropshadow(gaussian, rgba(243, 215, 116, 0.31746), 30, 0.3, 0, 0);
+    -fx-font-size: 40px;
+}
+
+.tile-512 {
+    -fx-text-fill: #f9f6f2;
+    -fx-background-color: #edc950;
+    -fx-effect: dropshadow(gaussian, rgba(243, 215, 116, 0.396825), 30, 0.3, 0, 0);
+    -fx-font-size: 40px;
+}
+
+.tile-1024 {
+    -fx-text-fill: #f9f6f2;
+    -fx-background-color: #edc53f;
+    -fx-effect: dropshadow(gaussian, rgba(243, 215, 116, 0.47619), 30, 0.3, 0, 0);
+    -fx-font-size: 30px;
+}
+
+.tile-2048 {
+    -fx-text-fill: #f9f6f2;
+    -fx-background-color: #edc22e;
+    -fx-effect: dropshadow(gaussian, rgba(243, 215, 116, 0.555556), 30, 0.3, 0, 0);
+    -fx-font-size: 30px;
+}

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<BorderPane fx:id="root" focusTraversable="true" onKeyPressed="#onKeyPressed" prefHeight="871.0" prefWidth="650.0" styleClass="root" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.srjc.cabinian.brian.final_cabinian_brian.Final_Cabinian_Brian_UI_Controller">
+   <center>
+      <VBox alignment="CENTER" maxWidth="550.0" minHeight="800.0" minWidth="550.0" prefHeight="817.0" prefWidth="550.0" spacing="20.0" stylesheets="@styles.css">
+          <padding>
+              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+          </padding>
+         <AnchorPane maxWidth="500.0" minWidth="500.0" prefHeight="102.0" prefWidth="500.0">
+            <children>
+                <Label fx:id="lblTitle" layoutY="14.0" prefHeight="68.0" prefWidth="200.0" text="2048">
+                  <padding>
+                     <Insets bottom="-5.0" top="-5.0" />
+                  </padding></Label>
+               <HBox alignment="CENTER_RIGHT" layoutX="264.0" layoutY="12.0" prefHeight="47.0" prefWidth="236.0">
+                  <children>
+                     <VBox alignment="CENTER" prefHeight="61.0" prefWidth="96.0" styleClass="score-container">
+                        <children>
+                           <Label styleClass="score-label" text="SCORE">
+                              <padding>
+                                 <Insets top="10.0" />
+                              </padding>
+                           </Label>
+                           <Label fx:id="lblScore" alignment="CENTER" prefHeight="25.0" prefWidth="82.0" styleClass="score-value" text="0">
+                              <padding>
+                                 <Insets top="-5.0" />
+                              </padding></Label>
+                        </children>
+                     </VBox>
+                     <Separator prefHeight="4.0" prefWidth="7.0" visible="false" />
+                     <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="56.0" prefWidth="103.0" styleClass="score-container">
+                        <children>
+                           <Label styleClass="score-label" text="BEST">
+                              <padding>
+                                 <Insets top="10.0" />
+                              </padding>
+                           </Label>
+                           <Label fx:id="lblBestScore" alignment="CENTER" prefHeight="25.0" prefWidth="95.0" styleClass="score-value" text="0">
+                              <padding>
+                                 <Insets top="-5.0" />
+                              </padding></Label>
+                        </children>
+                     </VBox>
+                  </children>
+               </HBox>
+            </children>
+            <padding>
+               <Insets bottom="-5.0" top="-5.0" />
+            </padding>
+         </AnchorPane>
+         <GridPane maxWidth="500.0" minWidth="500.0" prefHeight="30.0" prefWidth="500.0">
+           <columnConstraints>
+             <ColumnConstraints hgrow="SOMETIMES" maxWidth="264.0" minWidth="10.0" prefWidth="264.0" />
+             <ColumnConstraints hgrow="SOMETIMES" maxWidth="165.0" minWidth="10.0" prefWidth="92.0" />
+               <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="154.0" minWidth="10.0" prefWidth="154.0" />
+           </columnConstraints>
+           <rowConstraints>
+             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+           </rowConstraints>
+            <children>
+               <Label fx:id="lblIntro" prefHeight="31.0" prefWidth="253.0" text="Join the tiles, get to 2048!" />
+               <Button fx:id="btnNewGame" mnemonicParsing="false" onMouseClicked="#btnNewGame_Clicked" prefHeight="13.0" prefWidth="132.0" text="New Game" GridPane.columnIndex="2" />
+            </children>
+         </GridPane>
+         <Pane fx:id="tileContainer" maxHeight="500.0" maxWidth="500.0" minHeight="500.0" minWidth="500.0" prefHeight="500.0" prefWidth="500.0" VBox.vgrow="NEVER">
+            <children>
+               <GridPane fx:id="board" maxHeight="500.0" maxWidth="500.0" minHeight="500.0" minWidth="500.0" prefHeight="500.0" prefWidth="500.0" styleClass="grid-container">
+                 <columnConstraints>
+                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                 </columnConstraints>
+                 <rowConstraints>
+                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                 </rowConstraints>
+                  <children>
+                     <Pane prefHeight="200.0" prefWidth="200.0" styleClass="grid-cell">
+                        <GridPane.margin>
+                           <Insets />
+                        </GridPane.margin>
+                     </Pane>
+                     <Pane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" styleClass="grid-cell" GridPane.columnIndex="1" />
+                     <Pane layoutX="138.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" styleClass="grid-cell" GridPane.columnIndex="2" />
+                     <Pane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" styleClass="grid-cell" GridPane.columnIndex="3" />
+                     <Pane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" styleClass="grid-cell" GridPane.rowIndex="1" />
+                     <Pane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" styleClass="grid-cell" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                     <Pane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" styleClass="grid-cell" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                     <Pane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" styleClass="grid-cell" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                     <Pane layoutX="389.0" layoutY="139.0" prefHeight="200.0" prefWidth="200.0" styleClass="grid-cell" GridPane.rowIndex="2" />
+                     <Pane layoutX="18.0" layoutY="260.0" prefHeight="200.0" prefWidth="200.0" styleClass="grid-cell" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                     <Pane layoutX="18.0" layoutY="18.0" prefHeight="200.0" prefWidth="200.0" styleClass="grid-cell" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                     <Pane layoutX="18.0" layoutY="18.0" prefHeight="200.0" prefWidth="200.0" styleClass="grid-cell" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                     <Pane layoutX="389.0" layoutY="260.0" prefHeight="200.0" prefWidth="200.0" styleClass="grid-cell" GridPane.rowIndex="3" />
+                     <Pane layoutX="18.0" layoutY="18.0" prefHeight="200.0" prefWidth="200.0" styleClass="grid-cell" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                     <Pane layoutX="18.0" layoutY="18.0" prefHeight="200.0" prefWidth="200.0" styleClass="grid-cell" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                     <Pane layoutX="18.0" layoutY="18.0" prefHeight="200.0" prefWidth="200.0" styleClass="grid-cell" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                  </children>
+               </GridPane>
+            </children>
+         </Pane>
+         <TextFlow fx:id="txtFlowInstructions" maxWidth="500.0" minWidth="500.0" prefHeight="93.0" prefWidth="500.0">
+            <children>
+               <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="instruction-bold" text="HOW TO PLAY: " />
+               <Text layoutX="10.0" layoutY="10.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="instruction-regular" text="Use your " />
+               <Text layoutX="134.0" layoutY="10.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="instruction-bold" text="arrow keys " />
+               <Text layoutX="258.0" layoutY="10.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="instruction-regular" text="to move the tiles. Tiles with the same number " />
+               <Text layoutX="382.0" layoutY="10.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="instruction-bold" text="merge into one " />
+               <Text layoutX="10.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="instruction-regular" text="when they touch. Add them up to reach " />
+               <Text layoutX="134.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="instruction-bold" text="2048!" />
+            </children></TextFlow>
+      </VBox>
+   </center>
+   <left>
+      <Pane prefHeight="817.0" prefWidth="25.0" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <Pane prefHeight="817.0" prefWidth="25.0" BorderPane.alignment="CENTER" />
+   </right>
+</BorderPane>

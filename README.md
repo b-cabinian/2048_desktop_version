@@ -8,4 +8,5 @@ The project has two known bugs:
 - If the game is played too quickly, the JavaFX animation can't keep up and the tiles no longer move to the right locations. 
 
 Video demonstrations:
+
 Starting a new game.mp4 shows how a new game can be started.
